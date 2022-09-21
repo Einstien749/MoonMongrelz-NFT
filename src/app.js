@@ -164,18 +164,19 @@ class App extends React.Component {
                 </section>
 
                 <section id="mint">
-                    <div style={{position: 'relative', top: '30%'}}>
-                        <h2 style={{color: 'rgb(0,200,0)', fontSize: '1.7rem', textAlign: 'center'}}><input type='button' value='Mint' style={{ backgroundColor: 'rgb(0,200,0)', borderRadius: '2px', width: '100px', height: '50px'}} onClick={() => {this.setState({guess: true}); let x = Math.floor(Math.random()); let t = [true, false]; this.setState({win: t[x]}); this.setState({win: !this.state.win}); setTimeout(() => {this.setState({guess: false})}, 2000)}} /></h2>
-                        <div style={{display: this.state.guess ? 'block' : 'none', color: 'rgb(200,200,200)', fontSize: '1.4rem', textAlign: 'center'}}><div style={{color: 'rgb(0,200,0)', display: this.state.win ? 'block' : 'none', textAlign: 'center'}}><img src={logo8} style={{width: '20%', height: 'inherit', borderRadius: '50%'}} alt='Moon Mongrelz' /><p>Congratulation's You Won</p></div><div style={{display: !this.state.win ? 'block' : 'none', color: 'rgb(0,0,200)'}}><img src={logo5} style={{width: '20%', height: 'inherit', borderRadius: '50%'}} alt='Moon Mongrelz NFT' /><p>Sorry Try Again Next Time</p></div></div>
+                    <div style={{position: 'relative', top: '25%'}}>
+                        <h2 style={{color: 'rgb(0,200,0)', fontSize: '1.7rem', textAlign: 'center'}}> ARE YOU READY FOR A NEW COMPANION</h2>
+                        <h2 style={{color: 'rgb(0,200,0)', fontSize: '1.7rem', textAlign: 'center'}}><input type='button' value='Mint' style={{ backgroundColor: 'rgb(0,200,0)', borderRadius: '2px', width: '100px', height: '50px'}} onClick={ () => { this.Bark(); }} /></h2>
                     </div>
                 </section>
 
                 <section id="burn">
                     <div className='burn' style={{color: 'rgb(255,255,255)', minHeight: '100%'}}>
-                        <div style={{position: 'relative', top: '30%'}}>
+                        <div style={{position: 'relative', top: '5%'}}>
                             <h3 style={{color: 'rgb(200,0,0)', fontSize: '1.4rem', textAlign: 'center'}}>WARNING!!!</h3>
                             <p style={{textAlign: 'center'}}>If you use this feature, it cannot be undone and your pooch will be gone FOREVER</p>
-                            <p style={{textAlign: 'center'}}><input type='button' value='BURN' style={{color: 'rgb(255,255,255)',height: '30px', backgroundColor: 'rgb(255,0,0)', border: '2px outset rgb(200,200,200)', borderRadius: '5px'}} /></p>
+                            <p style={{textAlign: 'center'}}><input type='button' value='BURN' style={{color: 'rgb(255,255,255)',height: '50px', backgroundColor: 'rgb(255,0,0)', border: '2px outset rgb(200,200,200)', borderRadius: '5px'}}  onClick={() => {this.setState({guess: true}); let x = Math.floor(Math.random()*2); let t = [true, false]; this.setState({win: t[x]}); setTimeout(() => {this.setState({guess: false})}, 2000); let hi = new Howl({src: ['https://assets.mixkit.co/sfx/download/mixkit-dog-whimper-sad-466.wav'], html5: true});hi.play();}} /></p>
+                            <div style={{display: this.state.guess ? 'block' : 'none', color: 'rgb(200,200,200)', fontSize: '1.4rem', textAlign: 'center'}}><div style={{color: 'rgb(0,200,0)', display: this.state.win ? 'block' : 'none', textAlign: 'center'}}><img src={logo8} style={{width: '20%', height: 'inherit', borderRadius: '50%'}} alt='Moon Mongrelz' /><p>Congratulation's You Won</p></div><div style={{display: !this.state.win ? 'block' : 'none', color: 'rgb(0,0,200)'}}><img src={logo5} style={{width: '20%', height: 'inherit', borderRadius: '50%'}} alt='Moon Mongrelz NFT' /><p>Sorry Try Again Next Time</p></div></div>
                         </div>
                     </div>
                 </section>
